@@ -53,3 +53,33 @@
 		return Math.sqrt((sideA**2)+(sideB**2));
 	}
 	console.log(calculateSide(3,4));
+
+//Q5. Prime Numbers
+
+	const sumArray = (arr) => {
+		let sum = 0;
+		for (let i = 0; i<arr.length; i++){
+			sum += arr[i];
+		}
+		return sum;
+	}
+
+//Q6. Primes
+
+	const checkPrime = (prime) => {
+		for (let i = 2; i<=Math.sqrt(prime); i++){
+			if ( (prime % i)==0){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	const printPrimes = (arg) => {
+		for (let i =1; i <=arg; i++){
+			if(checkPrime(i)){
+				console.log(i);
+			}
+		}
+	}
+	printPrimes(97);
