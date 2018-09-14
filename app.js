@@ -47,4 +47,9 @@
 	sumDigits(11111);
 	sumDigits(6);
 
-//Q4. 
+//Q4. Pytahgoras
+
+	const calculateSide = (sideA, sideB) => {
+		return Math.sqrt((sideA**2)+(sideB**2));
+	}
+	console.log(calculateSide(3,4));
