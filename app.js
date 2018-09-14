@@ -6,3 +6,31 @@
 //
 
 //Q2. Palindrome
+
+	const isPal = (str) => {
+		str = str.toLowerCase();
+		return checkPal(str, 0, str.length-1);
+	}	
+
+	const checkPal = (str, forward, backward) =>{
+		if ( forward === backward){
+			console.log('true');
+			return true;
+		}
+		if((str.charAt(forward)) !== (str.charAt(backward))){
+			console.log('false');
+			return false;
+		}
+		if(forward < backward + 1){
+			console.log('checking');
+			return checkPal(str,forward+1,backward-1);
+		}
+		console.log('true');
+		return true;
+	}
+
+	isPal('radar')
+	isPal('RAdar');
+	isPal('Dog');
+
+//Q3. Digit 
