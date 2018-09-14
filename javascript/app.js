@@ -1,6 +1,6 @@
 console.log("javascript is working");
 //Part 1
-//1. A parameter is a variable declared as one of the inputs of the function, 
+//1. A parameter is a variable declared as one of the inputs of the function,
 //an argument is the actual value the function recieves.
 
 //2. A return will return the value specified to whatever called the function,
@@ -11,21 +11,28 @@ console.log("javascript is working");
 
 //Part 2
 const check_palindrome = (word) => {
-	if (word === word.split("").reverse().join("")) { 
+	if (word === word.split("").reverse().join("")) {
 		return true;
 	}
 	return false
 }
-//So there's no reverse string, but you can split it into 
+//So there's no reverse string, but you can split it into
 //an array of its constituent characters and reverse that, then join them together.
 //Since that's what I was about to do manually I don't feel too bad about looking up the
 //methods to do that in one line, even if it *looks* like I'm using magic (to me) code.
 console.log(check_palindrome("ada"))
 
  //Part 3
-//incomplete, deleted code rather than comment it out because I'm tired and want to
-//do a full rewrite in the morning rather than debug.
 
+const sum_digits = (number) => {
+	let sum_of_digits = 0;
+	const digits = (number.toString()).split('');
+	for (i = 0; i < digits.length;i++){
+		sum_of_digits += Number(digits[i]);
+	}
+	return sum_of_digits;
+}
+console.log(sum_digits(123));
 //Part 4
 const calculate_side = (side_a,side_b) => {
 	return Math.sqrt(side_a*side_a + side_b*side_b);
@@ -33,7 +40,14 @@ const calculate_side = (side_a,side_b) => {
 console.log(calculate_side(3,4))
 
 //Part 5
-//doing tomorrow morning
+const sum_array = (array) => {
+	sum = 0;
+	for(i=0;i<array.length;i++){
+		sum += array[i];
+	}
+	return sum;
+}
+console.log(sum_array([1,2,3]));
 
 //Part 6
 const check_prime = (number) => {
